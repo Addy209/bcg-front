@@ -17,13 +17,13 @@ const InsuranceBody=()=>{
         <CardOffer img='/45.jpg' title="Life Insurance" desc="Life Insurance policies offered by us" />
         </Col>
         <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-        <CardOffer img='/46.jpg' title="Life Insurance" desc="Life Insurance policies offered by us" />
+        <CardOffer img='/46.jpg' title="Mobile Insurance" desc="Mobile Insurance policies offered by us" />
         </Col>
         <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-        <CardOffer img='/47.jpg' title="Life Insurance" desc="Life Insurance policies offered by us" />
+        <CardOffer img='/47.jpg' title="Covid 19 Insurance" desc="Covid 19 Insurance policies offered by us" />
         </Col>
         <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-        <CardOffer img='/48.png' title="Life Insurance" desc="Life Insurance policies offered by us" />
+        <CardOffer img='/48.png' title="Vehicle Insurance" desc="Vehicle Insurance policies offered by us" />
         </Col>
         </Row>
       </div>
