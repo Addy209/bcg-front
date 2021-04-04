@@ -7,7 +7,7 @@ const CardOffer=(props)=>{
     return(
         <div className="card">
 <Card
-    style={{ width: 300 }}
+    style={{ width: 300, height: 300 }}
     cover={
       <img className="card"
         alt="example"

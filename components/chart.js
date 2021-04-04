@@ -31,7 +31,7 @@ const Charts=(props)=>{
     return(
     <Chart
   width={"800px"}
-  height={'340px'}
+  height={'400px'}
   chartType={props.chartType}
   loader={<div>Loading Chart</div>}
   data={props.Region?regionData:data}
