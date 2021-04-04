@@ -14,3 +14,61 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#chart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+	overflow-y:hidden;
+	z-index:-1;
+}
+
+#chart:hover{
+  transform: translate(1.5);
+}
+#radio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:1;
+  position: static;
+  margin-top:3vh;
+}
+
+.regionselect{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:15vh;
+  z-index:1;
+  position: static;
+}
+
+#search_box{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.editform{
+  margin-top:20vh;
+  width:100%;
+}
+@media 
+only screen and (max-width: 600px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  #chart{
+  display: block;
+  overflow-x: scroll;
+	overflow-y:hidden;
+	z-index:-1;
+  margin:0;
+  padding:0;
+}
+
+.radiotitle{
+  display:block;
+}
+}
