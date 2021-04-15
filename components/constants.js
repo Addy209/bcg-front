@@ -1,8 +1,9 @@
+const base_url='https://policy209.herokuapp.com/'
 export const api_urls={
-"search":"http://localhost:8000/search/",
-"get_put_single_object":"http://localhost:8000/policy/",
-"get_all_objects":"http://localhost:8000/allpolicy/",
-"get_chart_data":"http://localhost:8000/chartdata/"
+"search":`${base_url}search/`,
+"get_put_single_object":`${base_url}policy/`,
+"get_all_objects":`${base_url}allpolicy/`,
+"get_chart_data":`${base_url}/chartdata/`
 }
 
 export const MonthName=["Jan","Feb","Mar","April","May","June","July",
