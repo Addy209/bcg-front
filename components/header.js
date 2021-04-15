@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import { Layout, Menu, Dropdown, Button } from 'antd';
 import Link from 'next/link'
-import {withRouter} from 'next/Router'
+import {withRouter} from 'next/router'
 import {MenuOutlined} from '@ant-design/icons'
 
 const { Header, Content, Footer } = Layout;
