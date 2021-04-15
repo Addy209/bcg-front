@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import axios from 'axios'
 import {api_urls} from './constants'
 import { useRouter } from 'next/router'
 import {DisabledFormItem, SwitchItem} from './formitem'
 
 import { Form, Input, Button, Switch, InputNumber,Row, Col, message } from 'antd';
+import { route } from 'next/dist/next-server/server/router'
 const layout = {
   labelCol: {
     span: 8,
@@ -16,13 +17,16 @@ const layout = {
 
 const Edit = (props) => {
     const router = useRouter()
+    console.log(props)
   const onFinish = async(values) => {
     console.log('Success:', values);
     await axios.put(api_urls.get_put_single_object+props.id,values).then(res=>{
         console.log(res.data)
         message.success("Record Updated Successfully")
+       props.refresh()
         
     }).catch(err=>{
+      console.log(err)
         message.error("Record not Updated")
     })
 
@@ -32,8 +36,13 @@ const Edit = (props) => {
     console.log('Failed:', errorInfo);
     
   };
-  const data=props.val.data
-  const feature=props.val.feature[0]
+  const [data,setdata]=useState(props.val.data)
+  const [feature,setfeature]=useState(props.val.feature[0])
+
+  useEffect(()=>{
+    setdata(props.val.data)
+    setfeature(props.val.feature[0])
+  },[props.val.data.Premium,props.val.feature[0]])
 
   return (
     <Form

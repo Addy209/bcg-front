@@ -5,6 +5,8 @@ import Complete from '../components/body'
 import AllPolicy from '../components/allpolicy'
 import {api_urls} from '../components/constants'
 import axios from 'axios'
+import header from '../components/header'
+import Counter from '../components/counter'
 
 
 export const ComparePolicy=(props)=> {
@@ -14,6 +16,9 @@ export const ComparePolicy=(props)=> {
     <Headr />
     <div id="search_box">
     <Complete/>
+    </div>
+    <div>
+    <Counter />
     </div>
     <div className="allpolicy">
         <AllPolicy allpolicy={props.allpolicy} />

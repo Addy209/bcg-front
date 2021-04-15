@@ -5,11 +5,11 @@ import InsuranceBody from '../components/index/xyzinsurance'
 
 
 export default function Home() {
-  return (
+
+  return(
     <>
     <Headr />
     <InsuranceBody />
-   
     </>
   )
 }

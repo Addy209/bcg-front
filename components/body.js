@@ -5,6 +5,7 @@ import {api_urls, modalcolumns} from './constants'
 import ModalShow from './modalShow'
 import {EditOutlined,CheckCircleTwoTone, CloseCircleTwoTone} from '@ant-design/icons'
 import Link from 'next/link'
+import {debounce} from 'debounce'
 
 const {Option}=Select;
 
@@ -59,17 +60,22 @@ const Complete = () => {
       return
     }
 
+    const make_api_call=()=>{
     if(typeof cancelToken!= typeof undefined){
       cancelToken.cancel("Cancelled")
     }
     cancelToken=axios.CancelToken.source()
-    axios.get(api_urls.search+`?search_key=${value}&by=${selectedOption}` ,{cancelToken:cancelToken.token}).then(res=>{
+      axios.get(api_urls.search+`?search_key=${value}&by=${selectedOption}` ,{cancelToken:cancelToken.token}).then(res=>{
       const data=res.data
       const resp=buildresp(data)
       setOptions(resp)
     }).catch(err=>{
       console.log(err)
     })
+  }
+
+  debounce(()=>make_api_call(),1000).call()
+  
     
   };
 

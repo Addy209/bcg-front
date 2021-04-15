@@ -1,8 +1,8 @@
 export const api_urls={
 "search":"http://localhost:8000/search/",
-"get_put_single_object":"http://localhost:8000/getpolicy/",
-"get_all_objects":"http://localhost:8000/getallpolicy/",
-"get_chart_data":"http://localhost:8000/getchartdata/"
+"get_put_single_object":"http://localhost:8000/policy/",
+"get_all_objects":"http://localhost:8000/allpolicy/",
+"get_chart_data":"http://localhost:8000/chartdata/"
 }
 
 export const MonthName=["Jan","Feb","Mar","April","May","June","July",
