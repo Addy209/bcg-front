@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Input, AutoComplete, Modal, Button, Select } from 'antd';
 import axios from 'axios'
 import {api_urls, modalcolumns} from './constants'
-import ModalShow from './modalShow'
 import {EditOutlined,CheckCircleTwoTone, CloseCircleTwoTone} from '@ant-design/icons'
 import Link from 'next/link'
 import {debounce} from 'debounce'
